@@ -8,9 +8,10 @@ class vehicle{
     }
     drive(distance){
         this.mileage += distance;
+        return `${this.type} travelled ${distance} miles. Current mileage: ${this.mileage} miles.`;
     }
     getDetails(){
-        return ` Vehicle Details\n ---------------------\n Type : ${this.type} \n Make : ${this.make} \n Model : ${this.model} \n Year : ${this.year} \n Mileage : ${this.mileage} \n`;
+        return `Vehicle Details\n ---------------------\n Type : ${this.type} \n Make : ${this.make} \n Model : ${this.model} \n Year : ${this.year} \n Mileage : ${this.mileage} \n`;
     }
 }
 
@@ -20,9 +21,9 @@ let truck = new vehicle("Truck" , "Ford" , "F-150" , 2019);
 let bike = new vehicle("Motorcycle" , "Royal Enfield" , "Bullet 650" , 2026);
 
 //simulate trips
-car.drive(150);
-truck.drive(300);
-bike.drive(95);
+console.log(car.drive(150));
+console.log(truck.drive(300));
+console.log(bike.drive(95));
 
 console.log(car.getDetails());
 console.log(truck.getDetails());
